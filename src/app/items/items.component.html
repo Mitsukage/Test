@@ -1,0 +1,12 @@
+<h1>Items</h1>
+<div class="search">
+  <input type="text" placeholder="Type name here..." [(ngModel)]="textONewItem">
+  <input type="button" value="Add new" (click)="addNewItem()">
+</div>
+<div *ngFor="let item of (items | async).items; let i = index" class="item" (click)="selectItem(i)">
+  <div class="statusItem" [ngClass]="{'activeItem': i === (items | async).selected}"></div>
+  <div class="textButtonItem">
+    <div class="textItem">{{item.title}} <h4>{{item.comments.length}}</h4></div>
+    <input type="button" value="Delete" (click)="removeItem(i)">
+  </div>
+</div>

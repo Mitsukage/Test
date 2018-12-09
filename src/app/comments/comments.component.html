@@ -1,0 +1,13 @@
+<h1>Comments #{{(items | async).selected + 1}}</h1>
+<div class="showComments">
+  <div *ngFor="let co of (items | async).items[(items | async).selected].comments" class="comment">
+    <div class="avatar" [ngStyle]="{'background': co.color}"></div>
+    <div class="textComment">{{co.text}}
+    </div>
+  </div>
+</div>
+<div class="newComment">
+  <div class="avatarStart"></div>
+  <textarea class="newText" cols="30" rows="10" [(ngModel)]="textComment" (keyup.control.enter)="sendComment()"></textarea>
+</div>
+<input type="button" value="Send" class="sendComment" (click)="sendComment()">

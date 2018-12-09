@@ -1,0 +1,47 @@
+h1
+  color: #575b6a
+  padding-left: 24px
+
+.showComments
+  .comment
+    display: flex
+    justify-content: space-between
+    margin: 0 10px 10px 25px
+    border-bottom: 1px solid #f2f2f2
+    padding-bottom: 15px
+    .avatar
+      width: 50px
+      height: 50px
+      margin-right: 15px
+    .textComment
+      width: calc(100% - 65px)
+      font-size: 14px
+      color: #666666
+      white-space: pre-wrap
+
+.newComment
+  display: flex
+  justify-content: space-between
+  margin: 0 10px 10px 25px
+  .avatarStart
+    width: 50px
+    height: 50px
+    background: #e6e6e6
+    margin-right: 15px
+  .newText
+    width: calc(100% - 65px)
+    height: 100px
+    resize: none
+    outline: none
+
+.sendComment
+  width: 100%
+  border: none
+  background: #27ccc0
+  color: #FFFFFF
+  cursor: pointer
+  outline: none
+  &:hover
+    background: #27efe3
+  &:active
+    background: #27ccc0
